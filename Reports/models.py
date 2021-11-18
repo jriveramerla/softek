@@ -19,5 +19,7 @@ class customer_orders(models.Model):
 class weather(models.Model):
     date            = models.DateField()
     was_rainy       = models.BooleanField()
+    def getData(self):
+        return dict(date=self.date, was_rainy=self.was_rainy)
 
 
